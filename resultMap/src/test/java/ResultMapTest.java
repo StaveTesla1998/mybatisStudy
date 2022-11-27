@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ResultMapTest {
@@ -40,5 +41,22 @@ public class ResultMapTest {
         List<DeptmentMapper> deptmentMappers = mapper.selectDeptmentEmployById(2);
         sqlSession.close();
         System.out.println(deptmentMappers);
+    }
+
+    /**
+     * 通过Foreach标签添加多个用户
+     */
+    @Test
+    public void insertMoreEmploysByForeachTest(){
+        SqlSessionFactory sqlSessionFactory = SqlsessionFactoryUtil.getSqlSessionFactory();
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        EmployMapper mapper = sqlSession.getMapper(EmployMapper.class);
+        Employ employ = new Employ(null, "张三", 20, "男", null,null);
+        Employ employ1 = new Employ(null, "张三1", 20, "男", null,null);
+        Employ employ2 = new Employ(null, "张三2", 20, "男", null,null);
+        List<Employ> employs = Arrays.asList(employ, employ1, employ2);
+        mapper.insertByForeach(employs);
+//        sqlSession.commit();
+        sqlSession.close();
     }
 }

@@ -26,4 +26,11 @@
         WHERE
             a.emp_id = #{id};
     </select>
+    <insert id="insertByForeach">
+        INSERT INTO tb_emp
+        VALUES
+        <foreach collection = "employs" item = "emp" separator=",">
+            (NULL,#{emp.empName},#{emp.age},#{emp.gender},null)
+        </foreach>
+    </insert>
 </mapper>
