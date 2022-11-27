@@ -33,4 +33,14 @@
             (NULL,#{emp.empName},#{emp.age},#{emp.gender},null)
         </foreach>
     </insert>
+    <delete id="deleteMoreEmployByForeach">
+        DELETE
+        FROM
+        tb_emp
+        WHERE
+        emp_id IN
+        <foreach collection="empIds" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

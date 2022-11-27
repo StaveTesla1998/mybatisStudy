@@ -59,4 +59,17 @@ public class ResultMapTest {
 //        sqlSession.commit();
         sqlSession.close();
     }
+
+    /**
+     * 批量删除通过Foreach关键字
+     */
+    @Test
+    public void deleteMoreEmploysByForeachTest(){
+        SqlSessionFactory sqlSessionFactory = SqlsessionFactoryUtil.getSqlSessionFactory();
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        EmployMapper mapper = sqlSession.getMapper(EmployMapper.class);
+        Integer[] empIds=new Integer[]{7,8};
+        mapper.deleteMoreEmployByForeach(empIds);
+        sqlSession.close();
+    }
 }

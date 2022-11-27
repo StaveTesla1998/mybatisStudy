@@ -18,4 +18,10 @@ public interface EmployMapper {
      * @param employs
      */
     void insertByForeach(@Param("employs") List<Employ> employs);
+
+    /**
+     * 批量删除员工通过foreach标签
+     * @param empIds
+     */
+    void deleteMoreEmployByForeach(@Param("empIds") Integer[] empIds);
 }
