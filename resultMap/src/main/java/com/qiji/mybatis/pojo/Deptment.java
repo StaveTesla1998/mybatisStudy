@@ -1,15 +1,20 @@
 package com.qiji.mybatis.pojo;
 
+import java.util.List;
+
 public class Deptment {
     private Integer deptId;
     private String deptName;
 
+    private List<Employ> employs;
+
     public Deptment() {
     }
 
-    public Deptment(Integer deptId, String deptName) {
+    public Deptment(Integer deptId, String deptName, List<Employ> employs) {
         this.deptId = deptId;
         this.deptName = deptName;
+        this.employs = employs;
     }
 
     public Integer getDeptId() {
@@ -28,11 +33,20 @@ public class Deptment {
         this.deptName = deptName;
     }
 
+    public List<Employ> getEmploys() {
+        return employs;
+    }
+
+    public void setEmploys(List<Employ> employs) {
+        this.employs = employs;
+    }
+
     @Override
     public String toString() {
         return "Deptment{" +
                 "deptId=" + deptId +
                 ", deptName='" + deptName + '\'' +
+                ", employs=" + employs +
                 '}';
     }
 }
