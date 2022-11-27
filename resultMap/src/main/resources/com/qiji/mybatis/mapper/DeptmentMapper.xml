@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiji.mybatis.mapper.DeptmentMapper">
+    <resultMap id="selectDeptmentEmployByIdResultMap" type="Deptment">
+        <id column="dept_id" property="deptId"></id>
+        <result column="dept_name" property="deptName"></result>
+        <collection property="employs" ofType="employ">
+            <id column="emp_id" property="empId"></id>
+            <result column="emp_name" property="empName"></result>
+            <result column="age" property="age"></result>
+            <result column="gender" property="gender"></result>
+            <result column="dept_id" property="deptId"></result>
+        </collection>
+    </resultMap>
+    <select id="selectDeptmentEmployById" resultMap="selectDeptmentEmployByIdResultMap">
+        SELECT
+            a.*,
+            b.*
+        FROM
+            tb_dept a
+                LEFT JOIN tb_emp b ON a.dept_id = b.dept_id
+        WHERE
+            a.dept_id =#{id}
+    </select>
+</mapper>

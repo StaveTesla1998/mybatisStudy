@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e138f6b-6c97-4dd1-9386-e0e86d38a4be" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiji/mybatis/mapper/EmployMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiji/mybatis/pojo/Deptment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiji/mybatis/pojo/Employ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiji/mybatis/util/SqlsessionFactoryUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/qiji/mybatis/mapper/EmployMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ResultMapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/qiji/mybatis/mapper/DeptmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/qiji/mybatis/mapper/DeptmentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qiji/mybatis/pojo/Deptment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qiji/mybatis/pojo/Deptment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ResultMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ResultMapTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -63,7 +57,17 @@
       <recent name="E:\JavaCodeShangguigu\mybatisStudy\resultMap\src\main\resources\com\qiji\mybatis\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ResultMapTest.selectEmpDepByIdTest">
+  <component name="RunManager" selected="JUnit.ResultMapTest.selectDeptEmpolyById">
+    <configuration name="ResultMapTest.selectDeptEmpolyById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="resultMap" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ResultMapTest" />
+      <option name="METHOD_NAME" value="selectDeptEmpolyById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ResultMapTest.selectEmpByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="resultMap" />
       <option name="PACKAGE_NAME" value="" />
@@ -86,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ResultMapTest.selectDeptEmpolyById" />
         <item itemvalue="JUnit.ResultMapTest.selectEmpDepByIdTest" />
         <item itemvalue="JUnit.ResultMapTest.selectEmpByIdTest" />
       </list>
